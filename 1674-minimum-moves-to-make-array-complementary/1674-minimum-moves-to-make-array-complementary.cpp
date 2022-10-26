@@ -5,7 +5,7 @@ public:
         
         vector<ll>pref(2*k+2,0);
         ll n=a.size();
-        map<ll,ll>c;
+        vector<ll>c(2*k+2,0);
         for(int i=0;i<n/2;i++){
             ll a1=a[i];
             ll a2=a[n-i-1];
