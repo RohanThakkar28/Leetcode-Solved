@@ -42,7 +42,7 @@ public:
             }
         }
         int nott=0;
-        for(int j=1;j<=k-1;j++){
+        for(int j=0;j<=k-1;j++){
             nott+=dp[n-1][j];
             nott%=mod;
         }
@@ -51,7 +51,7 @@ public:
             ans*=2;
             ans%=mod;
         }
-        ans-=2;
+       // ans-=2;
         ans-=2*nott;
         ans=(ans+mod)%mod;
         return ans;
