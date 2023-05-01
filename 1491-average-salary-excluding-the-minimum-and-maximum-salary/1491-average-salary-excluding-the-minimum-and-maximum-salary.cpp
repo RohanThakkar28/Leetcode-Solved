@@ -4,10 +4,11 @@ public:
         sort(salary.begin(),salary.end());
         int n=salary.size();
         double ans=0;
-        for(int i=1;i<salary.size()-1;i++){
+        for(int i=1;i<n-1;i++){
             ans+=salary[i];
         }
         return ((ans)/(n-2)*1.0000);
         
     }
 };
+
