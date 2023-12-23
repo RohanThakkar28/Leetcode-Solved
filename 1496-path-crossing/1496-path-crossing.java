@@ -1,9 +1,10 @@
 class Solution {
     public boolean isPathCrossing(String path) {
+        Set<String>s=new HashSet<>();
+        s.add("0 0");
         int x=0;
         int y=0;
-        Set<Pair<Integer,Integer>>s=new HashSet<>();
-        s.add(new Pair(0,0));
+        
         for(int i=0;i<path.length();i++){
             if(path.charAt(i)=='N'){
                 y--;
@@ -17,10 +18,12 @@ class Solution {
             else{
                 x++;
             }
-            if(s.contains(new Pair(x,y))){
+            String s1=Integer.toString(x)+" "+Integer.toString(y);
+            if(s.contains(s1)){
                 return true;
             }
-            s.add(new Pair(x,y));
+            s.add(s1);
+            
         }
         return false;
     
