@@ -6,9 +6,9 @@ class Solution {
         int e1=0;
         int e2=1;
         for(int i=0;i<s.length();i++){
-            int a=Character.getNumericValue(s.charAt(i));
-           
-          
+           // int a=Character.getNumericValue(s.charAt(i));
+            int a=(int)s.charAt(i)-48;
+            System.out.println(a);
             if(a!=e1){
                 a1++;
             }
